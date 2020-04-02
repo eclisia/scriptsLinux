@@ -1,0 +1,48 @@
+# .bashrc
+
+# Usage et ATTENTION
+# Si le fichier provient de Windows, il peut y avoir un problème de compatibilité pour les retours chariots / fin de ligne.
+# Pour palier à ce problème, il faut executer la commande suivante sur le fichier
+# 		sed -i.bak 's/\r$//' ficher_a_convertir.txt
+ 
+
+# Source global definitions
+
+if [ -f /etc/bashrc ]; then
+
+        . /etc/bashrc
+
+fi
+
+ 
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+
+# export SYSTEMD_PAGER=
+
+ 
+
+# User specific aliases and functions
+
+ 
+
+#Personnalisation du prompt Bash / Shell
+
+        #PS1=$'\e[1;35m $USER@$HOSTNAME $(pwd) -\e[m  \e[0;31m $(date +"%y%m%d-%H%m%S" ) :\e[0;32m '
+
+ 
+
+#       PS1="[\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;214m\]\[\033[48;5;64m\]\H\[$(tput sgr0)\]\[\033[38;5;15m\]\[\033[48;5;-1m\]:\[$(tput sgr0)\]\[\033[38;5;12m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]] \\$ \[$(tput sgr0)\]"
+
+ 
+
+        PS1="[\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;214m\]\[\033[48;5;64m\]\H\[$(tput sgr0)\]\[\033[38;5;15m\]\[\033[48;5;-1m\]:\[$(tput sgr0)\]\[\033[38;5;12m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]]\D{%Y%m%d-%H%m%S} \\$ \[$(tput sgr0)\]"
+
+#Appel de l'outil neofetch
+# Telechargement et information
+# https://github.com/dylanaraps/neofetch
+# Notice : telecharger la derniere version puis untar avec la commande
+# tar -xzvf archive_neofetch
+# Puis se placer dans le repertoire dezip et executer le make avec la commande
+# sudo make -i install
+neofetch
